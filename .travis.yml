@@ -1,9 +1,8 @@
 language: python
 
 script:
--pip install pygame
--pip install random
--pip install pynput
+  -pip3 install pygame
+  -pip3 install pynput
   - python3 game.py
 
 branches:
