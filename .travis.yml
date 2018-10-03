@@ -1,8 +1,11 @@
 language: python3
-
+before_install:
+  - echo "BEFORE INSTALL START"
+  - gem install bundler
+  - echo "BEFORE INSTALL END"
 script:
   -python3 test.py
-
+  -bundle exec rspec spec --color --format documentation --require spec_helper
 branches:
   only:
   - gh-pages
