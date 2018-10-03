@@ -4,8 +4,7 @@ before_install:
   - gem install bundler
   - echo "BEFORE INSTALL END"
 script:
-  -python3 test.py
-  -bundle exec rspec spec --color --format documentation --require spec_helper
+  python3 test.py
 branches:
   only:
   - gh-pages
