@@ -2,3 +2,7 @@ language: python
 rvm:
  - 2.2
  - jruby
+ branches:
+  only:
+  - gh-pages
+  - /.*/
