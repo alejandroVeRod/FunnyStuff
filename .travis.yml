@@ -1,9 +1,8 @@
 language: python3
 
 script:
-  -pip3 install pygame
-  -pip3 install pynput
-  - python3 game.py
+  -pip3 install pygame pynput
+  -python3 game.py
 
 branches:
   only:
