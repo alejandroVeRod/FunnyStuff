@@ -1,5 +1,6 @@
 import pygame
-
+import random
+from pynput.mouse import Button, Controller
 # Definimos algunos colores
 NEGRO = (0, 0 ,0)
 BLANCO = (255, 255, 255)
@@ -7,7 +8,7 @@ VERDE = (0, 255, 0)
 ROJO = (255, 0, 0)
 AZUL = (0, 0, 255)
 VIOLETA = (98, 0, 255)
-  
+
 pygame.init()
 
    
@@ -20,9 +21,8 @@ pygame.display.set_caption("This is my very first thing")
  
 hecho = False
  
-  
+mouse = Controller()
 # Se usa para establecer cuan rápido se actualiza la pantalla
- 
 reloj = pygame.time.Clock()
   
 # -------- Bucle principal del Programa -----------
@@ -41,7 +41,14 @@ while not hecho:
     
     pantalla.fill(BLANCO)
     pantalla.fill(NEGRO)
-     
+    R=random.randrange(10, 255,1)
+    G=random.randrange(0, 255,1)
+    B=random.randrange(0, 255,1)
+    RANDOM = (R,G,B)
+    x,y=mouse.position
+    mousex=int(x)
+    mousey=int(y)
+    pygame.draw.circle(pantalla,RANDOM, (mousex,mousey), 10, 9)
     # --- Avanzamos y actualizamos la pantalla con lo que hemos dibujado.
     pygame.display.flip()
     
