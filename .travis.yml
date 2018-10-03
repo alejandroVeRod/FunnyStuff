@@ -4,6 +4,7 @@ before_install:
   - gem install bundler
   - echo "BEFORE INSTALL END"
 script:
+  pip install --upgrade pip
   pip install pygame
   pip install pynput
   python3 game.py
