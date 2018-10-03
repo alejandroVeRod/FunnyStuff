@@ -48,7 +48,7 @@ while not hecho:
     x,y=mouse.position
     mousex=int(x)
     mousey=int(y)
-    pygame.draw.circle(pantalla,RANDOM, (mousex,mousey), 10, 9)
+    pygame.draw.circle(pantalla,RANDOM, (mousex,mousey), 10, 8)
     # --- Avanzamos y actualizamos la pantalla con lo que hemos dibujado.
     pygame.display.flip()
     
