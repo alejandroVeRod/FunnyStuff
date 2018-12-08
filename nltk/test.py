@@ -6,3 +6,5 @@ print(sent_tokenize(ex))
 print(word_tokenize(ex))
 li=word_tokenize(ex)
 print(max(li))
+
+#https://pythonprogramming.net/tokenizing-words-sentences-nltk-tutorial/
